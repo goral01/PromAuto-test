@@ -1,0 +1,51 @@
+.dropdown {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    background-color: rgba(84, 84, 84, 1);
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px 10px 16px;
+
+    .checkName {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 2px solid rgba(242, 243, 245, 1);
+        background-color: #ffffff;
+        appearance: none;
+        cursor: pointer;
+
+        &:checked::before {
+            content: "";
+            width: 8px;
+            height: 6px;
+            background-image: url("../../../assets//svg/checked.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    
+    .dropdownMenu {
+        width: 300px;
+    }
+}

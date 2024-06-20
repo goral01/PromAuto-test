@@ -1,0 +1,74 @@
+.filterBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+    width: 400px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+
+    .filterInput {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgba(84, 84, 84, 1);
+        color: white;
+        width: 400px;
+        padding: 10px 16px 10px 16px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .filterInput::placeholder {
+        color: white;
+        opacity: 1;
+    }
+
+    .arrowInput {
+        position: absolute;
+        right: 22px;
+        top: 18px;
+        transition: transform 0.15s ease;
+        cursor: pointer;
+    }
+
+    .up {
+        transform: rotate(180deg);
+    }
+
+    .filterInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+
+        .filterCountClear {
+            display: flex;
+            gap: 80px;
+
+            .filterCount {
+                color: rgba(135, 135, 135, 1);
+            }
+
+            .filterClear {
+                cursor: pointer;
+            }
+        }
+
+        .filterName {
+            .filterNameCount {
+                color: rgba(135, 135, 135, 1);
+            }
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .filterBlock {
+        width: 300px;
+    }
+}
